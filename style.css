@@ -1,0 +1,22 @@
+body{
+    font-family: sans-serif;
+    background-color:rgba(219, 226, 233, 0.8);
+    
+}
+
+.btn-default{
+    background-color: #393D47;
+    color: ghostwhite;
+}
+
+.btn-default:focus{
+    background-color: #292C33;
+    color: ghostwhite;
+
+}
+
+.card{
+    background-color:rgba(120, 128, 122, 0.2);
+    border: #292C33;
+
+}
