@@ -1,0 +1,127 @@
+<!-- ನಮಸ್ಕಾರ -->
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ಮರುಪಾವತಿ ಲೆಕ್ಕಯಂತ್ರ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #loading-symbol, #results{
+            display:none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5">
+                    
+                    <h2 class="heading display-5 pb-3">
+                        ಮರುಪಾವತಿ ಲೆಕ್ಕಯಂತ್ರ
+                    </h2>
+                    
+                    <form id="loan-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <!-- &#8377 / &#x20B9 is ASCII code for Rupees symbol -->
+                                    <div class="input-group-text">
+                                        &#x20B9
+                                    </div>
+                                </div>
+                                <input type="number" placeholder="ಸಾಲ" id="loan_amount" class="form-control"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group"></div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        %
+                                    </div>
+                                </div>
+                                <input type="number" placeholder="ಬಡ್ಡಿಯ ದರ" id="interest" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <input type="number" placeholder="ಅವಧಿ" id="years" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value= "ಲೆಕ್ಕ ಮಾಡು" class= "btn btn-default btn-block form-control active"/>
+                        </div>
+                    </form>
+
+                    <div id = "loading-symbol">
+                        <centre>
+                            <img src = "loadingImg.gif" alt = "Loading Symbol" width="80" height="80"/>
+                        </centre>
+                        
+                    </div>
+
+                    <div class = "pt-4" id = "results">
+                        <h5>
+                            ಫಲಿತಾಂಶ
+                        </h5>
+
+                        <form id="result-form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            ತಿಂಗಳ ಪಾವತಿ
+                                        </div>
+                                    </div>
+                                    <input type="number" id="monthly_amount" class="form-control" disabled/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            ವರ್ಷದ ಪಾವತಿ
+                                        </div>
+                                    </div>
+                                    <input type="number" id="yearly_amount" class="form-control" disabled/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            ಮೊತ್ತ
+                                        </div>
+                                    </div>
+                                    <input type="number" id="total_amount" class="form-control" disabled/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            ಬಡ್ಡಿ
+                                        </div>
+                                    </div>
+                                    <input type="number" id="total_interest" class="form-control" disabled/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src = 'formula.js'></script>
+    
+</body>
+
+</html>
+<!-- ಧನ್ಯವಾದಗಲು -->

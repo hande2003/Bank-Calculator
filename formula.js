@@ -88,7 +88,7 @@ function showAlert(error){
     // set a timer for the alert to disappear
     setTimeout(() => {
         document.querySelector('.alert').remove()
-    }, 2000);
+    }, 3000);
 
 
 }
