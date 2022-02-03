@@ -64,7 +64,6 @@ function calculateEMI(P,r,n){
     // These are the web elements, whose values are going to be the result of our calculations
     const monthly_amount = document.getElementById("monthly_amount");
     const yearly_amount = document.getElementById("yearly_amount");
-    const invested_amount = document.getElementById("investement");
     const total_amount = document.getElementById("total_amount");
     const total_interest = document.getElementById("total_interest");
 
