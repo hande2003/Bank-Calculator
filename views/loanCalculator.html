@@ -1,0 +1,88 @@
+<!-- ನಮಸ್ಕಾರ -->
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಮರುಪಾವತಿ ಲೆಕ್ಕಯಂತ್ರ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+    <style>
+        #loading-symbol, #results{
+            display:none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h2 class="heading fs-1 fw-bold my-5 text-center">
+                ಮರುಪಾವತಿ ಲೆಕ್ಕಯಂತ್ರ
+            </h2>
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center">
+                    
+                    <form id="form">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="rupees-symbol">&#x20B9</span>
+                            <input type="float" placeholder="ಸಾಲ" id="principal" class="form-control" aria-describedby="rupees-symbol" required/>
+                        </div>
+                        
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="rate-symbol">%</span>
+                            <input type="float" placeholder="ಬಡ್ಡಿಯ ದರ" id="interest" class="form-control" aria-describedby="rate-symbol" required/>
+                        </div>
+                                                
+                        <input type="float" placeholder="ಅವಧಿ" id="years" class="form-control mb-3" required/>
+
+                        <button type="submit" class= "btn btn-default btn-block form-control active">ಲೆಕ್ಕ ಮಾಡು</button>
+                    </form>
+
+                    <div id = "loading-symbol">
+                        <centre>
+                            <img src="../public/images/loadingImg.gif" alt = "Loading Symbol" width="80" height="80"/>
+                        </centre>
+                    </div>
+
+                    <div class="pt-4" id = "results">
+                        <h4>
+                            ಫಲಿತಾಂಶ
+                        </h4>
+
+                        <form id="result-form">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inv">ತಿಂಗಳ ಪಾವತಿ</span>
+                                <input type="number" id="monthly_amount" class="form-control" aria-describedby="inv" disabled/>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="yrl-amt">ವರ್ಷದ ಪಾವತಿ</span>
+                                <input type="number" id="yearly_amount" class="form-control" aria-describedby="yrl-amt" disabled/>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="ttl-amt">ಮೊತ್ತ</span>
+                                <input type="number" id="total_amount" class="form-control" aria-describedby="ttl-amt" disabled/>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="int">ಬಡ್ಡಿ</span>
+                                <input type="number" id="total_interest" class="form-control" aria-describedby="int" disabled/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src = '../public/js/formula.js'></script>
+    <footer class="text-center mt-3">
+        <a href="/">ಮುಖ್ಯ ಪುಟ</a>
+    </footer>
+</body>
+
+</html>
+<!-- ಧನ್ಯವಾದಗಲು -->
